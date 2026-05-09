@@ -35,7 +35,7 @@ public class LucyEatReminderClient implements ClientModInitializer {
 
     public static Config config;
 
-    public static final LiteralArgumentBuilder<FabricClientCommandSource> command = ClientCommands.literal("fer")
+    public static final LiteralArgumentBuilder<FabricClientCommandSource> command = ClientCommands.literal("ler")
             .then(ClientCommands.literal("enabled").executes(_ -> {
                 config.enabled = !config.enabled;
                 saveConfig();
