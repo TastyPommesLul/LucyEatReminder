@@ -9,4 +9,6 @@ then drag both .jar files into your mods folder <br> on Windows, that's: ***(C:\
 To change the image shown, use the [Example Pack](https://github.com/TastyPommesLul/LucyEatReminder/tree/master/example-texturepack) and replace the image with a custom one (128x128 in size), <br>
 with the same name as the already provided one. <br>
 
-once done, select all files (assets folder, pack.mcmeta and pack.png), right click and archive it (.zip format)
+once done, select all files (assets folder, pack.mcmeta and pack.png), right click and archive it (.zip format). <br>
+then add it to the resource packs folder. <br>
+on Windows, that's: ***(C:\Users\YOUR_USERNAME\AppData\Roaming\\.minecraft\resourcepacks)***
