@@ -1,0 +1,8 @@
+{
+  "lucyeatreminder.debug": "Debug Mode",
+  "lucyeatreminder.debug.desc": "If enabled, show some debug info. \n(only useful for developers and curious people).",
+  "lucyeatreminder.enabled": "Enable LER",
+  "lucyeatreminder.enabled.desc": "If the Mod should be Enabled or not.",
+  "lucyeatreminder.amount": "Amount",
+  "lucyeatreminder.amount.desc": "§b§l(ctrl click to input a number directly)§r\nThe Hunger bar amount at which to start showing the image. \n(shows image if hunger bars are less than or equal to the inputted value)"
+}
