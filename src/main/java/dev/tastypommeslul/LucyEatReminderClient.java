@@ -75,7 +75,7 @@ public class LucyEatReminderClient implements ClientModInitializer {
         }
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, _) -> dispatcher.register(command));
         HudElementRegistry.attachElementAfter(VanillaHudElements.CROSSHAIR, Identifier.fromNamespaceAndPath(MOD_ID, "eat_texture"), (guiGraphics, _) -> {
-            Identifier TEXTURE = Identifier.fromNamespaceAndPath(MOD_ID, "textures/gui/eat_picture-128x128.png");
+            Identifier TEXTURE = Identifier.fromNamespaceAndPath(MOD_ID, "textures/gui/eat_texture-128x128.png");
             Minecraft client = Minecraft.getInstance();
             assert client.player != null;
             if (!config.enabled) return;
