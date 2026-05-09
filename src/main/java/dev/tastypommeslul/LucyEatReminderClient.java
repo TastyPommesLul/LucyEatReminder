@@ -45,7 +45,7 @@ public class LucyEatReminderClient implements ClientModInitializer {
                 saveConfig();
                 return Command.SINGLE_SUCCESS;
             })))
-            .then(ClientCommands.literal("debug").executes(context -> {
+            .then(ClientCommands.literal("debug").executes(_ -> {
                 config.debug = !config.debug;
                 saveConfig();
                 return Command.SINGLE_SUCCESS;
@@ -60,7 +60,7 @@ public class LucyEatReminderClient implements ClientModInitializer {
                         saveConfig();
                         return Command.SINGLE_SUCCESS;
                     })))
-            .then(ClientCommands.literal("config").executes(context -> {
+            .then(ClientCommands.literal("config").executes(_ -> {
                 Minecraft.getInstance().schedule(() -> Minecraft.getInstance().setScreen(LucyEatReminderClient.configScreen(null)));
                 return Command.SINGLE_SUCCESS;
             }));
@@ -73,9 +73,9 @@ public class LucyEatReminderClient implements ClientModInitializer {
         } catch (Exception e) {
             LOGGER.error("Failed to initialize Lattice config: {}", e.getMessage());
         }
-        ClientCommandRegistrationCallback.EVENT.register((dispatcher, buildContext) -> dispatcher.register(command));
-        HudElementRegistry.attachElementAfter(VanillaHudElements.CROSSHAIR, Identifier.fromNamespaceAndPath(MOD_ID, "eat_picture"), (guiGraphics, tickDelta) -> {
-            Identifier TEXTURE = Identifier.fromNamespaceAndPath(MOD_ID, "textures/gui/glorp_eat.png");
+        ClientCommandRegistrationCallback.EVENT.register((dispatcher, _) -> dispatcher.register(command));
+        HudElementRegistry.attachElementAfter(VanillaHudElements.CROSSHAIR, Identifier.fromNamespaceAndPath(MOD_ID, "eat_texture"), (guiGraphics, _) -> {
+            Identifier TEXTURE = Identifier.fromNamespaceAndPath(MOD_ID, "textures/gui/eat_picture-128x128.png");
             Minecraft client = Minecraft.getInstance();
             assert client.player != null;
             if (!config.enabled) return;
