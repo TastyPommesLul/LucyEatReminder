@@ -22,9 +22,6 @@
 			"dev.tastypommeslul.ModMenuImpl"
 		]
 	},
-	"mixins": [
-		"lucyeatreminder.mixins.json"
-	],
 	"depends": {
 		"fabricloader": ">=0.19.2",
 		"minecraft": "~26.1.2",
